@@ -198,6 +198,14 @@ namespace RPG_PoE
             {
                 TBequiped.Text += Environment.NewLine + "Accuracy: " + ase.Accuracy;
             }
+            if (player.Weapon.Critchance > 0)
+            {
+                TBequiped.Text += Environment.NewLine + "Critchance: " + ase.Critchance;
+            }
+            if (player.Weapon.Critdmg > 0)
+            {
+                TBequiped.Text += Environment.NewLine + "Crit damage: " + ase.Critdmg;
+            }
         }
 
         private void Naytahelmet(Helmet helmet, ComboBox sender)
