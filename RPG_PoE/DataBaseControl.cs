@@ -5,12 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
-
+using System.IO;
 namespace RPG_PoE
 {
     class DataBaseControl
     {
-        string con = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=PoECharacters;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+        string con = @"Data Source=(localdb)\MSSQLLocalDB;AttachDbFilename=" + Directory.GetCurrentDirectory() + @"\POEDB.mdf;Initial Catalog=PoECharacters;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
 
         //string con = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=RPG_Poe;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
         SqlConnection connection = new SqlConnection();
@@ -146,7 +146,7 @@ namespace RPG_PoE
             using (connection)
             {
                 yhdista();
-                string command = "INSERT INTO characters(Name, lifeleech, manaleech, defence, dmg, speed, hp, accuracy, level, critchance, critdmg, locationX, locationY, towerlvl, hpregen ,inchp) VALUES(@name, @lifeleech, @manaleech, @def, @dmg, @speed, @hp, @accuracy, @lvl, @critchance, @critdmg, @locationX, @locationY, @towerlvl, @hpregen, @inchp)";
+                string command = "INSERT INTO characters(Name, lifeleech, manaleech, defence, dmg, speed, hp, accuracy, level, incdmg, critchance, critdmg, locationX, locationY, towerlvl, hpregen ,inchp, exp, exptonextlvl) VALUES(@name, @lifeleech, @manaleech, @def, @dmg, @speed, @hp, @accuracy, @lvl, @incDMG, @critchance, @critdmg, @locationX, @locationY, @towerlvl, @hpregen, @inchp, @exp, @expToNext)";
                 SqlCommand sqlCommand = new SqlCommand(command, connection);
                 sqlCommand.Parameters.AddWithValue("@name", player.Name);
                 sqlCommand.Parameters.AddWithValue("@lifeleech", player.Lifeleech);
@@ -164,6 +164,9 @@ namespace RPG_PoE
                 sqlCommand.Parameters.AddWithValue("@towerlvl", player.Towerlvl);
                 sqlCommand.Parameters.AddWithValue("@hpregen", player.Hpregen);
                 sqlCommand.Parameters.AddWithValue("@inchp", player.Inchp);
+                sqlCommand.Parameters.AddWithValue("@incDMG", player.Increaseddmg);
+                sqlCommand.Parameters.AddWithValue("@exp", player.Exp);
+                sqlCommand.Parameters.AddWithValue("@expToNext", player.Exptonext);
                 sqlCommand.ExecuteNonQuery();
                 // tässä välissä haetaan pelaajan id koska sitä tarvitaan
                 command = "SELECT TOP 1 * FROM characters ORDER BY ID DESC";
@@ -203,8 +206,9 @@ namespace RPG_PoE
             using (connection)
             {
                 yhdista();
-                string command = "UPDATE characters SET lifeleech = @lifeleech, manaleech = @manaleech, defence = @def, dmg = @dmg, speed = @speed, hp = @hp, accuracy = @accuracy, level = @lvl, critchance = @critchance, critdmg = @critdmg, locationX = @locationX, locationY = @locationY, towerlvl = @towerlvl, hpregen = @hpregen, exp = @exp, exptonextlvl = @expn WHERE Id = @playerid";
+                string command = "INSERT INTO characters(Name, lifeleech, manaleech, defence, dmg, speed, hp, accuracy, level, incdmg, critchance, critdmg, locationX, locationY, towerlvl, hpregen ,inchp, exp, exptonextlvl) VALUES(@name, @lifeleech, @manaleech, @def, @dmg, @speed, @hp, @accuracy, @lvl, @incDMG, @critchance, @critdmg, @locationX, @locationY, @towerlvl, @hpregen, @inchp, @exp, @expToNext)";
                 SqlCommand sqlCommand = new SqlCommand(command, connection);
+                sqlCommand.Parameters.AddWithValue("@name", player.Name);
                 sqlCommand.Parameters.AddWithValue("@lifeleech", player.Lifeleech);
                 sqlCommand.Parameters.AddWithValue("@manaleech", player.Manaleech);
                 sqlCommand.Parameters.AddWithValue("@def", player.Def);
@@ -220,9 +224,9 @@ namespace RPG_PoE
                 sqlCommand.Parameters.AddWithValue("@towerlvl", player.Towerlvl);
                 sqlCommand.Parameters.AddWithValue("@hpregen", player.Hpregen);
                 sqlCommand.Parameters.AddWithValue("@inchp", player.Inchp);
-                sqlCommand.Parameters.AddWithValue("@playerid", player.Id);
+                sqlCommand.Parameters.AddWithValue("@incDMG", player.Increaseddmg);
                 sqlCommand.Parameters.AddWithValue("@exp", player.Exp);
-                sqlCommand.Parameters.AddWithValue("@expn", player.Exptonext);
+                sqlCommand.Parameters.AddWithValue("@expToNext", player.Exptonext);
                 sqlCommand.ExecuteNonQuery();
                 ViePassivetree(player);
             }
