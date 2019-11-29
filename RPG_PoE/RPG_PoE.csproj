@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8DC51DD8-6881-426E-A32E-7C401E137664}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>RPG_PoE</RootNamespace>
+    <AssemblyName>RPG_PoE</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Deadscreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Deadscreen.Designer.cs">
+      <DependentUpon>Deadscreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gamecontroller.cs" />
+    <Compile Include="ImageGallery.cs" />
+    <Compile Include="inventoryform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="inventoryform.Designer.cs">
+      <DependentUpon>inventoryform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="model\esineet\Amulet.cs" />
+    <Compile Include="model\esineet\Belt.cs" />
+    <Compile Include="model\esineet\Body.cs" />
+    <Compile Include="model\esineet\Boots.cs" />
+    <Compile Include="DataBaseControl.cs" />
+    <Compile Include="model\esineet\Esineet.cs" />
+    <Compile Include="model\esineet\Gloves.cs" />
+    <Compile Include="model\esineet\Helmet.cs" />
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="model\oliot\Boss.cs" />
+    <Compile Include="model\oliot\Monster.cs" />
+    <Compile Include="model\Tile.cs" />
+    <Compile Include="NewGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewGame.Designer.cs">
+      <DependentUpon>NewGame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="model\oliot\Oliot.cs" />
+    <Compile Include="model\oliot\Playerstats.cs" />
+    <Compile Include="PassiveTree.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PassiveTree.Designer.cs">
+      <DependentUpon>PassiveTree.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="model\esineet\Ring.cs" />
+    <Compile Include="model\oliot\Seikkailija.cs" />
+    <Compile Include="Score.cs" />
+    <Compile Include="TheGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TheGame.Designer.cs">
+      <DependentUpon>TheGame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="model\esineet\Weapon.cs" />
+    <Compile Include="IntVector.cs" />
+    <EmbeddedResource Include="Deadscreen.resx">
+      <DependentUpon>Deadscreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="inventoryform.resx">
+      <DependentUpon>inventoryform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewGame.resx">
+      <DependentUpon>NewGame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PassiveTree.resx">
+      <DependentUpon>PassiveTree.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="TheGame.resx">
+      <DependentUpon>TheGame.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\knight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pixelstair.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\monster.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dead.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shieldmonster.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\danger.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\explosion.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sword.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

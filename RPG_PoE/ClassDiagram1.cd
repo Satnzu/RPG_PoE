@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="RPG_PoE.DataBaseControl">
+    <Position X="10.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IxAEBAAAAAAAAEAAAABBQQAAIAAAAAAABAAAACASIAA=</HashCode>
+      <FileName>DataBaseControl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG_PoE.inventoryform">
+    <Position X="15.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gFAEAQAEACAAAlBgAkCBBCASAAAIiAYJgAABEAQQAAA=</HashCode>
+      <FileName>inventoryform.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG_PoE.Menu">
+    <Position X="12.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABACAAAAAQABCACAACAAAQAAAAIGAAAAAAAAE=</HashCode>
+      <FileName>Menu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG_PoE.Amulet" Collapsed="true">
+    <Position X="10.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAACAAAAQgAAAEAQAAAAE=</HashCode>
+      <FileName>model\esineet\Amulet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG_PoE.Belt" Collapsed="true">
+    <Position X="12.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>model\esineet\Belt.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG_PoE.Body" Collapsed="true">
+    <Position X="12" Y="1.25" Width="1.5" />
+    <InheritanceLine Type="RPG_PoE.Esineet" FixedToPoint="true">
+      <Path>
+        <Point X="11" Y="2.5" />
+        <Point X="11" Y="2.2" />
+        <Point X="12.812" Y="2.2" />
+        <Point X="12.812" Y="1.941" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>model\esineet\Body.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG_PoE.Boots" Collapsed="true">
+    <Position X="8.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>model\esineet\Boots.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG_PoE.Esineet">
+    <Position X="10.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AggAAAAAAAAAAAiAAAAIgAAAAAAAAAAAAIBAAAKAQAA=</HashCode>
+      <FileName>model\esineet\Esineet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG_PoE.Gloves" Collapsed="true">
+    <Position X="12.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAEAAAAAAAAAAAAAAAAAAAAAAAQAAAAE=</HashCode>
+      <FileName>model\esineet\Gloves.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG_PoE.Helmet" Collapsed="true">
+    <Position X="12.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>model\esineet\Helmet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG_PoE.Ring" Collapsed="true">
+    <Position X="8.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAEAAAAAAAAAAACAAAAAgAAAAAQAAAAE=</HashCode>
+      <FileName>model\esineet\Ring.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG_PoE.weapon" Collapsed="true">
+    <Position X="8.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAIgAAAAIAAAAAACAAAAAgAAAAgAAAAI=</HashCode>
+      <FileName>model\esineet\Weapon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG_PoE.Monster">
+    <Position X="6.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAAAAAAAACCAAAAgAAAAAA=</HashCode>
+      <FileName>model\oliot\Monster.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG_PoE.Oliot">
+    <Position X="4.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAgAAAAYiAAQMIgAUDECCEARAggABAAQAIQAE=</HashCode>
+      <FileName>model\oliot\Oliot.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG_PoE.Seikkailija">
+    <Position X="6.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>model\oliot\Seikkailija.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG_PoE.NewGame">
+    <Position X="8.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAACAASA2ABASARCAAAACAQAAAAABAABAAIAAAAA=</HashCode>
+      <FileName>NewGame.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG_PoE.Program" Collapsed="true">
+    <Position X="8.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG_PoE.TheGame">
+    <Position X="14" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQGikAGAACUEhggBkKCBwIACAwiAABAQIAAAAQNAIAA=</HashCode>
+      <FileName>TheGame.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG_PoE.Properties.Resources" Collapsed="true">
+    <Position X="10.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACBAAAhEAAAAQAABAAAIAAACAIAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG_PoE.Properties.Settings" Collapsed="true">
+    <Position X="12" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG_PoE.Boss">
+    <Position X="6.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAEAAAAAQgAAIAAAIAAAAEAAAABAAgAAEAAAIAA=</HashCode>
+      <FileName>model\oliot\Boss.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
