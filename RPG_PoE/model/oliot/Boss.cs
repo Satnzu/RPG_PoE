@@ -21,7 +21,7 @@ namespace RPG_PoE
             Random rnd = new Random();
             Dmg = (rnd.Next(10, 20) * (1 + towerlvl / 5));
             Def = (rnd.Next(15, 90) * (1 + towerlvl / 5));
-            Hp = (rnd.Next(100, 1000) * (1 + towerlvl / 5));
+            Hp = (rnd.Next(50, 300) * (1 + towerlvl / 5));
             Resistance = 50 / 100;
         }
 
