@@ -30,7 +30,6 @@
         {
             this.btnNewGame = new System.Windows.Forms.Button();
             this.LoadGame = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.labelscore = new System.Windows.Forms.Label();
@@ -39,7 +38,7 @@
             // 
             // btnNewGame
             // 
-            this.btnNewGame.Location = new System.Drawing.Point(40, 162);
+            this.btnNewGame.Location = new System.Drawing.Point(83, 161);
             this.btnNewGame.Name = "btnNewGame";
             this.btnNewGame.Size = new System.Drawing.Size(75, 23);
             this.btnNewGame.TabIndex = 0;
@@ -49,22 +48,13 @@
             // 
             // LoadGame
             // 
-            this.LoadGame.Location = new System.Drawing.Point(152, 161);
+            this.LoadGame.Location = new System.Drawing.Point(214, 161);
             this.LoadGame.Name = "LoadGame";
             this.LoadGame.Size = new System.Drawing.Size(75, 23);
             this.LoadGame.TabIndex = 1;
             this.LoadGame.Text = "LoadGame";
             this.LoadGame.UseVisualStyleBackColor = true;
             this.LoadGame.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(264, 161);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Credits";
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // comboBox1
             // 
@@ -110,7 +100,6 @@
             this.Controls.Add(this.labelscore);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.LoadGame);
             this.Controls.Add(this.btnNewGame);
             this.Name = "Menu";
@@ -125,7 +114,6 @@
 
         private System.Windows.Forms.Button btnNewGame;
         private System.Windows.Forms.Button LoadGame;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labelscore;
